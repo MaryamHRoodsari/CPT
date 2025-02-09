@@ -1,17 +1,16 @@
 FROM python:3.9-slim
 
-# Set working directory
 WORKDIR /app
-
-# Install dependencies first (leveraging Docker cache)
 COPY requirements.txt .
-RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
-# Copy the entire application
+# Install dependencies using no cache (to avoid stale wheels)
+RUN pip install --upgrade pip setuptools wheel && \
+    pip install --no-cache-dir -r requirements.txt
+
+# Force reinstallation of numpy and pandas to ensure binary compatibility
+RUN pip install --no-cache-dir --force-reinstall numpy pandas
+
 COPY . .
 
-# Expose the application port
 EXPOSE 8050
-
-# Run the application using Gunicorn
-CMD ["gunicorn", "app:app", "-b", "0.0.0.0:8050", "--workers=4"]
+CMD ["gunicorn", "app:server", "-b", "0.0.0.0:8050"]
