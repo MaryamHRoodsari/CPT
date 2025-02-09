@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CPT Simulator and Animator Web App (Proprietary)
 
 This repository contains a 3D Dash web application that simulates and animates the Continuum Periodic Table (CPT).  
@@ -17,4 +18,20 @@ Use, distribution, or modification requires explicit permission from the owner.
    ```bash
    git clone https://github.com/MaryamHRoodsari/my-cpt-app.git
    cd my-cpt-app
+=======
+# CPT
+my-cpt-app/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── app.py
+├── requirements.txt
+├── Dockerfile
+├── Procfile
+├── README.md
+├── LICENSE
+└── tests/
+    └── test_basic.py
+
+>>>>>>> 6f71fa935fc48bc37c9d0e9804c2bd92505db8c6
 
