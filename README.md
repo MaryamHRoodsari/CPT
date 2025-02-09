@@ -8,8 +8,9 @@ my-cpt-app/
 ├── Dockerfile
 ├── Procfile
 ├── README.md
-├── tests/
-│   └── test_basic.py
-└── LICENSE
+├── LICENSE
+└── tests/
+    └── test_basic.py
+
 
  
