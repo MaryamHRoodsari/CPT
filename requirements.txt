@@ -6,3 +6,4 @@ numpy>=1.24.0
 mendeleev>=0.9.0,<1.0.0   # Added to provide real element data
 pytest>=7.2.0,<8.0.0
 flake8>=6.0.0,<7.0.0
+
