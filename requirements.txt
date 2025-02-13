@@ -2,7 +2,7 @@ dash>=2.9.0,<3.0.0
 plotly>=5.13.0,<6.0.0
 gunicorn>=20.1.0,<21.0.0
 pandas>=1.5.3,<2.0.0
-numpy>=1.24.0  # Updated to a version that supports Python 3.12
+numpy>=1.24.0
+mendeleev>=0.9.0,<1.0.0   # Added to provide real element data
 pytest>=7.2.0,<8.0.0
 flake8>=6.0.0,<7.0.0
-

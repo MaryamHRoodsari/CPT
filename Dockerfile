@@ -13,4 +13,4 @@ RUN pip install --no-cache-dir --force-reinstall numpy pandas
 COPY . .
 
 EXPOSE 8050
-CMD ["gunicorn", "app:server", "-b", "0.0.0.0:8050"]
+CMD ["gunicorn", "app:server", "-b", "0.0.0.0:8050", "--timeout", "120"]
